@@ -1,0 +1,10 @@
+{
+  "name": "무장애 이동경로 서비스",
+  "description": "이용자 유형(휠체어, 고령자, 유모차, 시각장애인, 보행보조)에 맞는 맞춤형 무장애 이동경로 및 실시간 안내 서비스",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
