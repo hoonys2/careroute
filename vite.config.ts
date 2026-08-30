@@ -19,9 +19,16 @@ export default defineConfig(() => {
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
       proxy: {
         '/tago-api': {
-          target: 'http://apis.data.go.kr',
+          target: 'https://apis.data.go.kr',
           changeOrigin: true,
+          secure: false,
           rewrite: (path) => path.replace(/^\/tago-api/, ''),
+        },
+        '/tmap-api': {
+          target: 'https://apis.openapi.sk.com',
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/tmap-api/, ''),
         },
       },
     },

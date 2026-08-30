@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# TAGO 공공데이터포털 버스정보 API 프록시 (HTTPS 및 CORS 문제 방지)
+[[redirects]]
+  from = "/tago-api/*"
+  to = "https://apis.data.go.kr/:splat"
+  status = 200
+  force = true
+
+# TMAP 보행자/대중교통 API 프록시
+[[redirects]]
+  from = "/tmap-api/*"
+  to = "https://apis.openapi.sk.com/:splat"
+  status = 200
+  force = true
+
+# SPA (Single Page Application) 라우팅
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
